@@ -1,8 +1,6 @@
 // ----------------- GÉNÉRATEUR --------------------------- //
-
-
-
-
+//une unité =1 seconde
+let timer = 1;
 
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
@@ -11,26 +9,32 @@ function setup() {
 }
 
 function draw() {
-    background(255);
+
 
     //face(width/2, height/2, 120, 30);
-    for (let x = 0; x < width, x = x + 100) {
-        face(x, height / 2, x / 100, 230)
+    if (frameCount % (timer * 60) == 0 && !mouseIsPressed) {
+        background(255);
+        for (let x = 0; x < width; x = x + 100) {
+            face(x, height / 2, x / 100, 230)
+        }
     }
 }
 
+//EMOJIS
+
 function face(x, y, bouche, couleur) {
+
     fill(couleur);
     ellipse(x, y, 200);
     fill(255);
-    ellipse(x - 40, y - 40, 40, 40)
+    ellipse(x - 20, y - 60, 20, 20)
     fill(0);
-    ellipse(x - 40, y - 40, 10, 10)
+    ellipse(x - 20, y - 60, 20, 20)
     fill(255);
-    ellipse(x + 40, y - 40, 40, 40)
+    ellipse(x + 20, y - 60, 20, 20)
     fill(0);
-    ellipse(x + 40, y - 40, 10, 10)
-    line(x - bouche, y + 50, x + bouche, y + 50);
+    ellipse(x + 20, y - 60, 20, 20)
+    line(x - bouche, y + 10, x + bouche, y + 10);
 
 }
 
