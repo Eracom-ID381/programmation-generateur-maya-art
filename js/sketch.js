@@ -24,17 +24,19 @@ function draw() {
 
 function face(x, y, bouche, couleur) {
 
-    fill(couleur);
-    ellipse(x, y, 200);
-    fill(255);
-    ellipse(x - 20, y - 60, 20, 20)
+    fill(255, 300, 0);
+    ellipse(x, y, 244);
+    fill(255, 0, 0);
+    ellipse(x - 20, y - 80, 20, 20)
     fill(0);
-    ellipse(x - 20, y - 60, 20, 20)
+    ellipse(x - 20, y - 80, 20, 20)
     fill(255);
     ellipse(x + 20, y - 60, 20, 20)
     fill(0);
     ellipse(x + 20, y - 60, 20, 20)
     line(x - bouche, y + 10, x + bouche, y + 10);
+    ellipse(x + 20, y - 60, 20, 20)
+    line(x - bouche, y + 50, x + bouche, y + 50);
 
 }
 
